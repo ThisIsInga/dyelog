@@ -1,0 +1,361 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    list-style: none;
+    font-family: "Archivo", sans-serif;
+    letter-spacing: 0.5px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    background: none;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+button:focus,
+button:focus-visible,
+button:active,
+button:focus-within {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+button::-moz-focus-inner {
+    border: 0 !important;
+}
+
+input {
+    cursor: text;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+
+
+/* НАЧАЛО СТИЛЕЙ САЙТА */
+
+.accent-text{
+    color: rgb(212, 8, 8);
+}
+
+.container .header__nav{
+    background-color: black;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 86px;
+    justify-content: center;
+    align-items: center;
+    background-color: #0F0F0F;
+    z-index: 9999999999999999;
+}
+
+.header__nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header__nav-list {
+    display: flex;
+    margin-left: 20px;
+}
+
+.header__nav-list li {
+    margin-left: 20px;
+}
+
+.header__nav-list li button img {
+    width: 30px;
+}
+
+.header__logo {
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.header__social-list {
+    display: flex;
+    margin-right: 20px;
+}
+
+.header__social-list li{
+    margin-right: 20px;
+}
+
+.header__social-list li button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+.header__social-list li button img {
+    width: 16px;
+    height: 16px;
+}
+
+
+
+/* NEWS СТИЛИ */
+
+.news .container {
+    margin-top: 70px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.news__title h2 {
+    font-size: 50px;
+    text-align: left;
+}
+
+.news__title h2::after {
+    content: '';
+    display: block;
+    height: 10px;
+    width: 60px;
+    border-radius: 10px;
+    background-color: rgb(212, 8, 8);
+}
+
+.news__card {
+    width: 800px;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.news__card p:nth-child(1) {
+    color: rgba(92, 92, 92, 0.664);
+}
+
+.news__card h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.news__card h2::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    background-image: url('./assets/img/news/share.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.news__card img {
+    width: 800px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.news__card p {
+    width: 800px;
+}
+
+
+
+/* ANOTHER СТИЛИ */
+
+.another-news .container {
+    margin-top: 70px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+}
+
+.another-news__title h2 {
+    font-size: 30px;
+    text-align: left;
+}
+
+.another-news__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.another-news__card {
+    width: 380px;
+    flex: 0 1 380px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.247);
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.another-news__card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.another-news__card-info {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    flex-grow: 1;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.another-news__card-info div {
+    flex-grow: 1;
+}
+
+.another-news__card-info p {
+    color: gray;
+    margin: 0 0 8px 0;
+    font-size: 14px;
+}
+
+.another-news__card-info h2 {
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.another-news__card-info button {
+    margin-top: 20px;
+    width: 100px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #ffffff;
+    background-color: rgb(212, 8, 8);
+    border: 1px solid rgb(212, 8, 8);
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.another-news__card-info button:hover {
+    background-color: transparent;
+    border: 1px solid rgb(212, 8, 8);
+    color: rgb(212, 8, 8);
+}
+
+
+
+/* FOOTER СТИЛИ */
+
+.footer__top {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+}
+
+.footer__top a:first-of-type {
+    font-weight: 900;
+}
+
+.footer__ul {
+    display: flex;
+    gap: 40px;
+}
+
+
+
+.footer__bottom .container {
+    height: 100px;
+    color: #fff;
+    background-color: #000;
+}
+
+.footer__bottom-content {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer__bottom-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer__bottom-social img{
+    background-color: #fff;
+    border-radius: 24px;
+}
+
+.footer__bottom-social li button img{
+    width: 30px;
+    border-radius: 50px;
+    background-color: #FFFFFF;
+}
+
+.footer__bottom-social li button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+.footer__bottom-use {
+    display: flex;
+    gap: 20px;
+}

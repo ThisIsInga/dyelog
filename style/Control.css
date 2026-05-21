@@ -1,0 +1,228 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    list-style: none;
+    font-family: "Archivo", system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+body {
+    background: linear-gradient(145deg, #f4f7fc 0%, #eef2f5 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+button,
+input,
+textarea,
+select {
+    background: none;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+button:focus,
+button:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+input {
+    cursor: text;
+}
+
+textarea {
+    cursor: text;
+    resize: vertical;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* ----- PRODUCT CARD / CONTAINER STYLES ----- */
+.product {
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 650px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* ----- TITLE SECTION (red underline accent) ----- */
+.product__title {
+    width: 100%;
+    padding: 2rem 2rem 0.5rem 2rem;
+}
+
+.product__title h2 {
+    font-size: 60px;
+    text-align: left;
+    margin-left: 0;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #1a2a3a 0%, #2c3e4e 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 1.1;
+}
+
+.product__title h2::after {
+    content: '';
+    display: block;
+    height: 10px;
+    width: 70px;
+    border-radius: 10px;
+    background-color: rgb(212, 8, 8);
+    margin-top: 12px;
+    transition: width 0.2s ease;
+}
+
+/* ----- FORM AREA ----- */
+.product__form {
+    padding: 1.5rem 2rem 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Убираем margin: 0.5rem и добавляем display: flex для центрирования */
+.product__form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* INPUTS, SELECT, TEXTAREA WITH BORDER - теперь выровнены по центру */
+.product__form input,
+.product__form select,
+.product__form textarea {
+    width: 100%;
+    margin: 0;  /* Убрал margin: 0.5rem */
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    background-color: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 18px;
+    transition: all 0.25s ease;
+    color: #1e293b;
+    font-weight: 450;
+    letter-spacing: 0.3px;
+    cursor: text;
+    box-sizing: border-box; /* Добавлено для правильного расчета ширины */
+}
+
+/* File input specific styling */
+.product__form input[type="file"] {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    background-color: #f8fafc;
+}
+
+.product__form input[type="file"]::file-selector-button {
+    background-color: rgb(212, 8, 8);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-right: 1rem;
+    transition: background-color 0.2s;
+}
+
+.product__form input[type="file"]::file-selector-button:hover {
+    background-color: #8f0606;
+}
+
+/* Select dropdown */
+.product__form select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236c757d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    background-repeat: no-repeat;
+    background-position: right 1.25rem center;
+}
+
+/* Textarea */
+.product__form textarea {
+    min-height: 100px;
+    font-family: inherit;
+}
+
+/* placeholder styling */
+.product__form input::placeholder,
+.product__form textarea::placeholder {
+    color: #a0afc0;
+    font-weight: 400;
+    opacity: 1;
+}
+
+/* Focus states */
+.product__form input:focus,
+.product__form select:focus,
+.product__form textarea:focus {
+    border-color: rgb(212, 8, 8);
+    box-shadow: 0 0 0 3px rgba(212, 8, 8, 0.1);
+}
+
+/* BUTTON: full width, red background */
+.product__form button {
+    width: 100%;
+    background-color: rgb(212, 8, 8);
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 1rem 1rem;
+    border-radius: 40px;
+    letter-spacing: 1px;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 14px rgba(212, 8, 8, 0.25);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.product__form button:active {
+    transform: scale(0.96);
+    background-color: #8f0606;
+}
+
+/* Two-column layout for weight and price */
+.form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
